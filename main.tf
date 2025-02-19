@@ -79,7 +79,7 @@ resource "aws_db_instance" "default" {
   engine               = "sqlserver-se"
   engine_version       = "14.00.3035.2.v1"
   instance_class       = "db.t3.medium"
-  identifier           = ""
+  identifier           = "w2d-dbsql01"
   username             = var.db_username
   password             = var.db_password
   publicly_accessible  = false
