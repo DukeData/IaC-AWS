@@ -78,7 +78,7 @@ resource "aws_db_instance" "default" {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "sqlserver-se"
-  engine_version       = "15.00.4073.23"
+  engine_version       = "16.00.4165.4"
   instance_class       = "db.t3.medium"
   identifier           = "w2d-dbsql01"
   username             = var.db_username
