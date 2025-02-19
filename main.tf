@@ -58,6 +58,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "w2d-server01"
+  ami                    = "ami-05188fcabea1c2e9f"
   instance_type          = "t2.micro"
   key_name               = "user1"
   monitoring             = true
@@ -70,3 +71,6 @@ module "ec2_instance" {
     Environment = "dev"
   }
 }
+
+
+#ami-05188fcabea1c2e9f
