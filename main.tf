@@ -60,7 +60,7 @@ module "ec2_instance" {
   name = "w2d-server01"
   ami                    = "ami-0c55b159cbfafe1f0"
   instance_type          = "t2.micro"
-  key_name               = "user1"
+  #key_name               = "user1" - Uncomment this line to use your own key pair
   monitoring             = true
   #vpc_security_group_ids = ["sg-12345678"]
   #subnet_id              = "subnet-eddcdzz4"
