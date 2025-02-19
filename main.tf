@@ -75,7 +75,7 @@ module "ec2_instance" {
 # Creating RDS SQL Instance
 
 module "rds_example_complete_mssql" {
-  source  = "terraform-aws-modules/rds/aws//examples/complete-mssql"
+  source  = "terraform-aws-modules/rds/aws/examples/complete-mssql"
   version = "6.10.0"
   name = "W2D-RDSSQL01"
   engine = "sqlserver-se"
