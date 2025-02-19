@@ -78,7 +78,7 @@ resource "aws_db_instance" "default" {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "sqlserver-ex"
-  engine_version       = "15.00.4073.23"  # Updated to a supported version
+  engine_version       = "15.00"  # Updated to a supported version
   instance_class       = "db.t3.micro"
   identifier           = "w2d-dbsql01"
   username             = var.db_username
