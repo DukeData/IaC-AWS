@@ -72,9 +72,9 @@ module "ec2_instance" {
   }
 }
 
-# Creating  RDS SQL Instance
+# Creating RDS SQL Instance
 
-module "rds_example_complete-mssql" {
+module "rds_example_complete_mssql" {
   source  = "terraform-aws-modules/rds/aws//examples/complete-mssql"
   version = "6.10.0"
   name = "W2D-RDSSQL01"
@@ -83,14 +83,15 @@ module "rds_example_complete-mssql" {
   instance_class = "db.t3.medium"
   allocated_storage = 20
   storage_type = "gp2"
-  username = "admin"
-  password = "Password12345"
+  username = var.db_username
+  password = var.db_password
   publicly_accessible = false
   multi_az = false
+  # Uncomment and replace with actual values
   # subnet_ids = ["subnet-0f9f6b6f"]
   # vpc_security_group_ids = ["sg-0f9f6b6f"]
   tags = {
     Terraform   = "true"
     Environment = "dev"
-  }   
   }
+}
