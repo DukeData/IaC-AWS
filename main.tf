@@ -74,17 +74,6 @@ module "ec2_instance" {
 
 # Creating RDS SQL Instance
 # Default provider configuration
-provider "aws" {
-  region = "us-east-1"
-}
-
-# Aliased provider configuration (if needed)
-provider "aws" {
-  alias  = "secondary"
-  region = "us-west-2"
-}
-
-# Using the default provider
 resource "aws_db_instance" "default" {
   allocated_storage    = 20
   storage_type         = "gp2"
