@@ -74,7 +74,7 @@ module "ec2_instance" {
 # Creating RDS SQL Instance
 # Default provider configuration
 #
-resource "aws_db_instance" "default" {
+resource "aws_db_instance"  {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "sqlserver-ee"
