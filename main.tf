@@ -57,14 +57,13 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
 # Creating EC2 instance
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
-
   name = "w2d-server01"
-
   instance_type          = "t2.micro"
   key_name               = "user1"
   monitoring             = true
   #vpc_security_group_ids = ["sg-12345678"]
   #subnet_id              = "subnet-eddcdzz4"
+  version = "4.0.0" 
 
   tags = {
     Terraform   = "true"
