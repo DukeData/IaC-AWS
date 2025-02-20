@@ -1,2 +1,2 @@
 db_username = "adminsql"
-db_password = "Password1234"
+db_password = "Password12345"
