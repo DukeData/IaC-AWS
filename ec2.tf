@@ -1,5 +1,5 @@
 # Creating EC2 instance
-module "ec2_instance1" {
+module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   name = "w2d-server02"
   ami                    = "ami-0c55b159cbfafe1f0"

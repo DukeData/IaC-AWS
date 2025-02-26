@@ -1,7 +1,7 @@
 # Creating RDS SQL Instance
 # Default provider configuration
 #
-resource "aws_db_instance1" "default" {
+resource "aws_db_instance" "default" {
   allocated_storage    = 20
   storage_type         = "gp2"
   engine               = "sqlserver-ex"
