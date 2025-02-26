@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-2"
-}
-
 # Creating EC2 instance
 module "ec2_instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
