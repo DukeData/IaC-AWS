@@ -54,44 +54,6 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "example" {
   }
 }
 
-# Creating EC2 instance
-module "ec2_instance" {
-  source  = "terraform-aws-modules/ec2-instance/aws"
-  name = "w2d-server01"
-  ami                    = "ami-0c55b159cbfafe1f0"
-  instance_type          = "t2.micro"
-  #key_name               = "user1" - Uncomment this line to use your own key pair
-  monitoring             = true
-  #vpc_security_group_ids = ["sg-12345678"]
-  #subnet_id              = "subnet-eddcdzz4"
-  version = "4.0.0" 
-
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
-# Creating RDS SQL Instance
-# Default provider configuration
-#
-resource "aws_db_instance" "default" {
-  allocated_storage    = 20
-  storage_type         = "gp2"
-  engine               = "sqlserver-ex"
-  engine_version       = "15.00"  # Updated to a supported version
-  instance_class       = "db.t3.micro"
-  identifier           = "w2d-dbsql01"
-  username             = var.db_username
-  password             = var.db_password
-  publicly_accessible  = false
-  multi_az             = false
-
-  tags = {
-    Terraform   = "true"
-    Environment = "dev"
-  }
-}
-
 variable "db_username" {
   type        = string
   description = "The username for the RDS instance"
